@@ -23,7 +23,7 @@ XF86MonBrightness{Down,Up}
     brightnessctl set 10%{-,+}
 # Lock Screen
 XF86Display
-    dm-tool lock && echo locked >> ~/l.log
+    dm-tool lock
 
 #
 # bspwm hotkeys
