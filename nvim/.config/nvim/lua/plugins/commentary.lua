@@ -1,3 +1,7 @@
 return {
-		'tpope/vim-commentary'
+    'tpope/vim-commentary',
+	keys = {
+			{ "<leader>/", "<cmd>Commentary<cr>"}
+	}
 }
+

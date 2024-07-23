@@ -14,6 +14,17 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# Multimedia keys
+# Volume Control
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+    amixer set Master {toggle,5%-,5%+}
+# Brightness
+XF86MonBrightness{Down,Up}
+    brightnessctl set 10%{-,+}
+# Lock Screen
+XF86Display
+    dm-tool lock && echo locked >> ~/l.log
+
 #
 # bspwm hotkeys
 #

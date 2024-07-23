@@ -1,19 +1,20 @@
 M = {}
 
-M.replacer = {
+M.init = function()
+  local map = vim.keymap.set
+  map("n", "<leader>p", '"*p', { silent = true, desc = "Paste from mouse" })
+  map("n", "<leader>P", '"*P', { silent = true, desc = "Paste before from mouse" })
+end
+
+M.comment = {
   {
-    "<leader>rq",
+    "<leader>/",
     function()
-      require("replacer").run()
+		vim.cmd(":Commentary")
     end,
     silent = true,
-    desc = "Make quickfix editable for replacing in",
+    desc = "Comment line",
   },
-}
-
--- And other plugin keymaps like this
-M.trouble = {
-  ...
 }
 
 return M
