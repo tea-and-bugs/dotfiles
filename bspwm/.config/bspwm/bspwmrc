@@ -20,3 +20,4 @@ bspc rule -a Firefox desktop="^1"
 polybar top-bar &
 nitrogen --restore 
 nm-applet &
+cat $HOME/.config/dunst/dunstrc $HOME/.config/dunst/base16-material-palenight | dunst -config -
