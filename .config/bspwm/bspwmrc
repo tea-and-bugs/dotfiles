@@ -17,7 +17,9 @@ bspc config gapless_monocle      true
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Firefox desktop="^1"
 
-polybar top-bar &
 nitrogen --restore 
+xsetroot -cursor_name left_ptr &
+polybar top-bar &
+# picom &
 nm-applet &
 cat $HOME/.config/dunst/dunstrc $HOME/.config/dunst/base16-material-palenight | dunst -config -

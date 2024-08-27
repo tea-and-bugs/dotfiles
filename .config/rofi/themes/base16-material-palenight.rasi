@@ -7,6 +7,9 @@
  */
 
 * {
+
+    font: "Hack Nerd Font 16";
+    
     red:                         rgba ( 240, 113, 120, 100 % );
     blue:                        rgba ( 130, 170, 255, 100 % );
     lightfg:                     rgba ( 149, 157, 203, 100 % );

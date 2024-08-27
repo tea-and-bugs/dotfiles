@@ -9,3 +9,5 @@ family = "Hack Nerd Font"
 [font.bold]
 style = "Bold"
 
+[window]
+# opacity = 0.9

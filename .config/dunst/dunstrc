@@ -1,7 +1,7 @@
 [global]
 frame_color = "#959dcb"
 separator_color = "#959dcb"
-font = Hack Nerd Font 12
+font = "Hack Nerd Font 12"
 
 [base16_low]
     msg_urgency = "low"
