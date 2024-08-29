@@ -20,6 +20,17 @@ bspc rule -a Firefox desktop="^1"
 nitrogen --restore 
 xsetroot -cursor_name left_ptr &
 polybar top-bar &
-# picom &
+alttab -d 2 \
+	-theme oomox-material-palenight \
+	-bg "#292D3E" \
+	-fg "#959DCB" \
+	-frame "#89DDFF" \
+	-font "xft:Hack Nerd Font-12" \
+	-t 168x192 \
+	-i 48x48 \
+
+&
+picom &
 nm-applet &
+blueman-applet &
 cat $HOME/.config/dunst/dunstrc $HOME/.config/dunst/base16-material-palenight | dunst -config -
