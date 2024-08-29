@@ -4,9 +4,4 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 
-if [[ $TERM == "xterm-kitty" ]]; then
-  alias ssh="kitty +kitten ssh"
-fi
-
-alias ls='ls -GA'
-alias firefox='/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox'
+alias ls='ls -A --group-directories-first --color'

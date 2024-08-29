@@ -13,8 +13,11 @@ super + @space
 super + shift + @space
 	sudo rofi -show run
 
+super + Escape 
+	rofi -show power-menu -modi power-menu:rofi-power-menu
+
 # make sxhkd reload its configuration files:
-super + Escape
+super + shift + r
 	pkill -USR1 -x sxhkd
 
 # Multimedia keys
