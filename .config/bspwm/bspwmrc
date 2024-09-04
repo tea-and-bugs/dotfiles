@@ -17,7 +17,7 @@ bspc config gapless_monocle      true
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Firefox desktop="^1"
 
-nitrogen --restore 
+sh ~/.fehbg
 xsetroot -cursor_name left_ptr &
 polybar top-bar &
 # alttab -d 2 \
