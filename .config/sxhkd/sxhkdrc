@@ -13,8 +13,16 @@ super + @space
 super + shift + @space
 	sudo rofi -show run
 
+super + @period
+	rofimoji
+
+super + shift + @period
+	rofi-kbmap
+
 super + Escape 
 	rofi -show power-menu -modi power-menu:rofi-power-menu
+super + shift + s
+	scrot
 
 # make sxhkd reload its configuration files:
 super + shift + r
@@ -37,7 +45,7 @@ XF86Display
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+bspc {quit,wm -r}
 
 # close and kill
 super + {_,shift + }w

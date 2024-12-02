@@ -5,14 +5,14 @@ return {
 	},
 	config = function()
 		pcall(require('nvim-treesitter.install').update { with_sync = true })
-		pcall(require('nvim-treesitter.configs').setup {
+		require('nvim-treesitter.configs').setup {
 
 			modules = {},
 			sync_install = false,
 			ignore_install = {},
 
 
-			ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vim', 'ruby' },
+			-- ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vim', 'ruby' },
 			auto_install = false,
 
 			highlight = { enable = true },
@@ -32,6 +32,6 @@ return {
 					lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
 				}
 			}
-		})
+		}
 	end,
 }

@@ -17,9 +17,11 @@ bspc config gapless_monocle      true
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Firefox desktop="^1"
 
+light-locker --lock-on-suspend --lock-on-lid &
 sh ~/.fehbg
 xsetroot -cursor_name left_ptr &
 polybar top-bar &
+pcmanfm -d &
 # alttab -d 2 \
 # 	-theme oomox-material-palenight \
 # 	-bg "#292D3E" \
@@ -32,4 +34,5 @@ picom &
 nm-applet &
 blueman-applet &
 volctl &
+copyq &
 cat $HOME/.config/dunst/dunstrc $HOME/.config/dunst/base16-material-palenight | dunst -config -
