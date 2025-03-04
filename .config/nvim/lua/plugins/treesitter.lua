@@ -1,37 +1,20 @@
-return {
-	'nvim-treesitter/nvim-treesitter',
-	dependencies = {
-		'nvim-treesitter/nvim-treesitter-textobjects',
-	},
-	config = function()
-		pcall(require('nvim-treesitter.install').update { with_sync = true })
-		pcall(require('nvim-treesitter.configs').setup {
+local M = {
+  "nvim-treesitter/nvim-treesitter",
+  build = function()
+    require("nvim-treesitter.install").update({ with_sync = true })()
+  end,
 
-			modules = {},
-			sync_install = false,
-			ignore_install = {},
+  config = function()
+    local configs = require("nvim-treesitter.configs")
 
-
-			ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vim', 'ruby' },
-			auto_install = false,
-
-			highlight = { enable = true },
-			indent = { enable = true, disable = { 'python' } },
-			incremental_selection = {
-				enable = true,
-				keymaps = {
-					init_selection = '<c-space>',
-					node_incremental = '<c-space>',
-					scope_incremental = '<c-s>',
-					node_decremental = '<M-space>',
-				},
-			},
-			textobjects = {
-				select = {
-					enable = true,
-					lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-				}
-			}
-		})
-	end,
+    configs.setup({
+      ensure_installed = { "lua", "vim", "vimdoc", "javascript", "html" },
+      auto_install = true,
+      sync_install = false,
+      highlight = { enable = true },
+      indent = { enable = true },
+    })
+  end,
 }
+
+return { M }
