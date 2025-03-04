@@ -4,7 +4,7 @@ return {
     opts = {
 	options = {
 	    icons_enabled = false,
-	    theme = 'base16',
+	    theme = 'catppuccin',
 	    component_separators = '|',
 	    section_separators = '',
 	}

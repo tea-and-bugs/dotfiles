@@ -3,6 +3,11 @@ vim.wo.cursorline = true
 vim.wo.cursorlineopt = "number"
 vim.wo.signcolumn = "yes"
 
+vim.o.expandtab = true
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+
 vim.o.mouse = "a"
 vim.o.clipboard = "unnamedplus"
 vim.o.breakindent = true
@@ -22,5 +27,4 @@ vim.o.splitright = true
 vim.o.formatoptions = "jql"
 vim.o.showmode = false
 vim.o.scrolloff = 8
-vim.o.tabstop = 4
-
+-- vim.cmd.colorscheme "catppuccin-mocha"
